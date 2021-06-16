@@ -3,7 +3,6 @@ class ContactMailer < ApplicationMailer
 
   def welcome_email
     @contact = params[:contact]
-  	binding.pry
     # @url  = 'http://example.com/login'
     mail(to: @contact.email, subject: 'Welcome to the contact')
   end
