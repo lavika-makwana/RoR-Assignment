@@ -5,23 +5,18 @@ en:
   address: 'Address'
   full_address: 'Mada Center 8th floor, 379 Hudson St, New York, NY 10018 US'
   lets_talk: 'Lets Talk'
-# en:
-#   activerecord:
-#     attributes:
-#       contact:
-#         email: Email@
-#         first_name: First@Name
-#         last_name: Last@Name
-#         phone: 
-#     model:
-#       contact: contacts
-#   back: Back
-#   date:l
-#     formats:
-#       default: "%m/%d/%Y"
-#       short: "%m/%d"
-#   edit: Edit
-#   greetings: Hello guest!
-#   visitors:
-#     index:
-#       greetings: Hello guest!
+  general_support: 'General Support'
+  contact_email: 'contact@example.com'
+  heading: 'Send Us A Message'
+  name_label: 'TELL US YOUR NAME *'
+  first_name: 'First Name'
+  last_name: 'Last Name'
+  email_label: 'ENTER YOUR EMAIL *'
+  eg_email: 'Eg. example.example@email.com'
+  phone_label: 'ENTER PHONE NUMBER' 
+  eg_phone: 'Eg. +1 800000000'
+  message: 'Message'
+  message_text: 'Write us a message'
+  sbmit_btn: 'SEND MESSAGE'
+
+
