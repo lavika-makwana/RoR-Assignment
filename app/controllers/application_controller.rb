@@ -1,9 +1,16 @@
 class ApplicationController < ActionController::Base
 	protect_from_forgery with: :null_session
-	around_action :switch_locale
+	before_action :set_locale
 
-	def switch_locale(&action)
-	  locale = params[:locale] || I18n.default_locale
-	  I18n.with_locale(locale, &action)
-	end
+  private
+
+  def set_locale
+    I18n.locale = params[:locale] || I18n.default_locale
+    # current_user.locale
+    # request.env["HTTP_ACCEPT_LANGUAGE"]
+  end
+
+  def default_url_options(options = {})
+    { locale: I18n.locale }.merge options
+  end
 end

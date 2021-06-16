@@ -6,6 +6,19 @@
 <body>
 	<div class="container-contact100">
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			# _navigation_links.html.erb
+			<%= content_tag :li do %>
+				<%#= link_to User.model_name.human, users_path %>
+			<% end %>
+
+			<%= content_tag :li do %>
+				<%= link_to 'Switch to English', locale: :en %>
+			<% end unless current_page?(locale: :en) %>
+
+			<%= content_tag :li do %>
+				<%= link_to 'Switch to Japanese', locale: :ja %>
+			<% end unless current_page?(locale: :ja) %>
+
 		  <a class="navbar-brand" href="#">Navbar</a>
 		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 		    <span class="navbar-toggler-icon"></span>
