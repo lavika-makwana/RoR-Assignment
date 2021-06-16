@@ -5,11 +5,13 @@
   </head>
   <body>
     <p>
-      You have successfully signed up to example.com,
-      your username is: .<br>
+      Welcome to our Application!
+      Hey <%= @contact.first_name %><br>
+      <%= @contact.last_name %>
     </p>
     <p>
-      To login to the site, just follow this link:
+      Your Message is <br>
+      <span>@contact.message</span>
     </p>
     <p>Thanks for joining and have a great day!</p>
   </body>
