@@ -17,7 +17,7 @@ gem 'pry'
 gem 'rails-i18n'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
-# Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
+gem 'simplecov', require: false, group: :test
 gem 'turbolinks', '~> 5'
 gem 'transifex-interface-ruby'
 gem 'webpacker', '~> 4.0'
