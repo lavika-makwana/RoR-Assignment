@@ -1,12 +1,28 @@
 require('@rails/ujs').start()
 require('turbolinks').start()
 require('@rails/activestorage').start()
-require('channels')
 require('jquery')
-require('bootstrap')
 require('popper.js')
+require('channels')
 
+import './main.js';
 import '../stylesheets/application';
+
+window.jQuery = $;
+window.$ = $;
+
+// Libraries/Vendor-plugins
+// require('../plugins/jquery/jquery-3.2.1.min.js');
+// require('../plugins/bootstrap/js/popper.js');
+// require('../plugins/bootstrap/js/bootstrap.min.js');
+// require('../plugins/select2/select2.min.js');
+
+// require('../plugins/daterangepicker/moment.min.js');
+// require('../plugins/masonry.min.js');
+// require('../plugins/mmenu.min.js');
+// require('../plugins/tooltips.min.js');
+// require('../plugins/daterangepicker/daterangepicker.js');
+// require('../plugins/js/main.js');
 // require("stylesheets/application.scss")
 // require("@rails/ujs").start()
 // require("turbolinks").start()
@@ -27,3 +43,4 @@ import '../stylesheets/application';
 
 // // const images = require.context('../images', true)
 // // const imagePath = (name) => images(name, true)
+

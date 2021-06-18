@@ -1,8 +1,8 @@
-##Read me
+## Read me
 
 ## About this project
 
-RoR Assignment, contains the contact form, localisation, transifix API integration and test coverages.
+RoR Assignment, contains the contact form, localization with Transifex, API integration and test coverages.
 
 
 ## Installation
@@ -10,11 +10,11 @@ RoR Assignment, contains the contact form, localisation, transifix API integrati
 * clone ror-assignment repo and use bundle install to get the latest gems
 
 * Project is created with:
-  ruby version -2.6.5 and rails 6.0.3
+  ruby version -2.6.3 and rails 6.0.3
 
 
 ```bash
-$ use rvm 2.6.5
+$ use rvm '2.6.3'
 ```
 ```bash
 $ bundle install

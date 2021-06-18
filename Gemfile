@@ -20,7 +20,8 @@ gem 'sass-rails', '>= 6'
 gem 'simplecov', require: false, group: :test
 gem 'turbolinks', '~> 5'
 gem 'transifex-interface-ruby'
-gem 'webpacker', '~> 4.0'
+# gem 'webpacker', '~> 4.0'
+gem 'webpacker', '~> 5.0'
 # Use Redis adapter to run Action Cable in production
 
 # Use sqlite3 as the database for Active Record
