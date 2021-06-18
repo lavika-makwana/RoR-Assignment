@@ -24,12 +24,12 @@
 
 				<label class="label-input100" for="first-name"><%= t :name_label%></label>
 				<div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Type first name">
-					<input id="first-name" class="input100" type="text" name="contact[first_name]" placeholder=<%= t :first_name %> required>
-					<span class="focus-input100"></span>
+					<input id="first-name" class="input100 fNameTxtOnly" type="text" name="contact[first_name]" placeholder=<%= t :first_name %> required>
+					<span class="focus-input100 fNameError"></span>
 				</div>
 				<div class="wrap-input100 rs2-wrap-input100 validate-input" data-validate="Type last name">
-					<input class="input100" type="text" name="contact[last_name]" placeholder=<%= t :last_name %> required>
-					<span class="focus-input100"></span>
+					<input class="input100 lNameTxtOnly" type="text" name="contact[last_name]" placeholder=<%= t :last_name %> required>
+					<span class="focus-input100 lNameError"></span>
 				</div>
 
 				<label class="label-input100" for="email"><%= t :email_label%></label>
@@ -40,7 +40,7 @@
 
 				<label class="label-input100" for="phone"><%= t :phone_label %></label>
 				<div class="wrap-input100">
-					<input id="phone" class="input100" type="number" name="contact[phone_number]" placeholder=<%= t :eg_phone %>>
+					<input id="phone" class="input100 numeric" type="number" name="contact[phone_number]" placeholder=<%= t :eg_phone %>>
 					<span class="focus-input100"></span>
 				</div>
 
@@ -106,21 +106,36 @@
 </body>
 </html>
 <script type="text/javascript">
-  function saveContact()
-    {
-	    $.ajax({
-	      type: "POST",
-	      url: $('#group-form').attr('action'),
-	      data: $('#group-form').serialize(),
-	      dataType: "json",
-	      success: function(data) {
-					$('#success').addClass('show');
-	        window.location.replace('/contacts');
-	      },
-	      error: function(){
-	        $('#failure').addClass('show');
-	      }
-	    });
-	  return false;
-  }
+	$(document).ready(function(){
+    $( ".fNameTxtOnly, .lNameTxtOnly" ).keypress(function(e) {
+    $(".fNameError, .lNameError").css("border-color", "#00ad5f");
+      var key = e.keyCode;
+      if (key >= 48 && key <= 57) {
+        e.preventDefault();
+        if(e.currentTarget.id == "first-name"){
+					$(".fNameError").css("border-color", "red");        	
+        }
+        else{
+        	$(".lNameError").css("border-color", "red");
+        }
+      }
+    });
+	  function saveContact()
+	    {
+		    $.ajax({
+		      type: "POST",
+		      url: $('#group-form').attr('action'),
+		      data: $('#group-form').serialize(),
+		      dataType: "json",
+		      success: function(data) {
+						$('#success').addClass('show');
+		        window.location.replace('/contacts');
+		      },
+		      error: function(){
+		        $('#failure').addClass('show');
+		      }
+		    });
+		  return false;
+	  }
+	});
 </script>

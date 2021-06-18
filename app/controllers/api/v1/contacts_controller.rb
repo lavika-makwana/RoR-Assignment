@@ -6,7 +6,7 @@ class Api::V1::ContactsController < ApplicationController
     if @contact.save
       render json: @contact, status: :created
       ContactMailer.with(contact: @contact).welcome_email.deliver_now
-    else 
+    else
       render json: @contact.errors, status: 422
     end
   end
