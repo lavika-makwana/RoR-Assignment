@@ -5,7 +5,7 @@ require('jquery')
 require('popper.js')
 require('channels')
 
-import './main.js';
+require('packs/main')
 import '../stylesheets/application';
 
 window.jQuery = $;
