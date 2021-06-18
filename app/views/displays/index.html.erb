@@ -56,55 +56,54 @@
 					</button>
 				</div>
 			</form>
-			<%= content_tag :div, class: "contact100-more flex-col-c-m background_img"   do %>
-			<!-- <div class="contact100-more flex-col-c-m" style="background-image: url('./assets/images/bg-01.jpg');"> -->
-				<div class="flex-w size1 p-b-47">
-					<div class="txt1 p-r-25">
-						<span class="lnr lnr-map-marker"></span>
-					</div>
-					<div class="flex-col size2">
-						<span class="txt1 p-b-20">
-							<%= t :address %>
-						</span>
+		<div class="contact100-more flex-col-c-m contact-background">
+			<div class="flex-w size1 p-b-47">
+				<div class="txt1 p-r-25">
+					<span class="lnr lnr-map-marker"></span>
+				</div>
+				<div class="flex-col size2">
+					<span class="txt1 p-b-20">
+						<%= t :address %>
+					</span>
 
-						<span class="txt2">
-							<%= t :full_address %>
-						</span>
-					</div>
+					<span class="txt2">
+						<%= t :full_address %>
+					</span>
 				</div>
-				<div class="dis-flex size1 p-b-47">
-					<div class="txt1 p-r-25">
-						<span class="lnr lnr-phone-handset"></span>
-					</div>
-					<div class="flex-col size2">
-						<span class="txt1 p-b-20">
-							Lets Talk
-						</span>
-						<span class="txt3">
-							+1 800 1236879
-						</span>
-					</div>
+			</div>
+			<div class="dis-flex size1 p-b-47">
+				<div class="txt1 p-r-25">
+					<span class="lnr lnr-phone-handset"></span>
 				</div>
-				<div class="dis-flex size1 p-b-47">
-					<div class="txt1 p-r-25">
-						<span class="lnr lnr-envelope"></span>
-					</div>
-					<div class="flex-col size2">
-						<span class="txt1 p-b-20">
-							General Support
-						</span>
-						<span class="txt3">
-							contact@example.com
-						</span>
-					</div>
+				<div class="flex-col size2">
+					<span class="txt1 p-b-20">
+						Lets Talk
+					</span>
+					<span class="txt3">
+						+1 800 1236879
+					</span>
 				</div>
-			<% end %>
+			</div>
+			<div class="dis-flex size1 p-b-47">
+				<div class="txt1 p-r-25">
+					<span class="lnr lnr-envelope"></span>
+				</div>
+				<div class="flex-col size2">
+					<span class="txt1 p-b-20">
+						General Support
+					</span>
+					<span class="txt3">
+						contact@example.com
+					</span>
+				</div>
+			</div>
 		</div>
 		<div class="after_submit" id="success">Form submitted successfully</div>
 		<div class="after_submit" id="failure">Something went wrong, please check entered details</div>
 	</div>
 </body>
 </html>
+
 <script type="text/javascript">
 	$(document).ready(function(){
     $( ".fNameTxtOnly, .lNameTxtOnly" ).keypress(function(e) {
@@ -129,16 +128,13 @@
 	      data: $('#group-form').serialize(),
 	      dataType: "json",
 	      success: function(data) {
-	      	alert('working');
 					$('#success').addClass('show');
 	        window.location.replace('/contacts');
 	      },
 	      error: function(){
-	      	alert(' ddddddd working');
 	        $('#failure').addClass('show');
 	      }
 	    });
 	  return false;
   }
-
 </script>

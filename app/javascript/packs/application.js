@@ -1,14 +1,19 @@
+require('jquery')
+require('popper.js')
 require('@rails/ujs').start()
 require('turbolinks').start()
 require('@rails/activestorage').start()
-require('jquery')
-require('popper.js')
 require('channels')
 
-import '../stylesheets/application';
+// import '../stylesheets/application';
 
 window.jQuery = $;
 window.$ = $;
+
+require('packs/main.js');
+
+
+// require('select2/select2.min.js');
 
 // Libraries/Vendor-plugins
 // require('../plugins/jquery/jquery-3.2.1.min.js');
