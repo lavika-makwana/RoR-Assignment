@@ -17,6 +17,7 @@ gem 'pry'
 gem 'rails-i18n'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
+gem 'shoulda-matchers'
 gem 'simplecov', require: false, group: :test
 gem 'turbolinks', '~> 5'
 gem 'transifex-interface-ruby'
