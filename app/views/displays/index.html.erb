@@ -108,7 +108,7 @@
 <script type="text/javascript">
 	$(document).ready(function(){
     $( ".fNameTxtOnly, .lNameTxtOnly" ).keypress(function(e) {
-    $(".fNameError, .lNameError").css("border-color", "#00ad5f");
+    	$(".fNameError, .lNameError").css("border-color", "#00ad5f");
       var key = e.keyCode;
       if (key >= 48 && key <= 57) {
         e.preventDefault();
@@ -120,22 +120,25 @@
         }
       }
     });
-	  function saveContact()
-	    {
-		    $.ajax({
-		      type: "POST",
-		      url: $('#group-form').attr('action'),
-		      data: $('#group-form').serialize(),
-		      dataType: "json",
-		      success: function(data) {
-						$('#success').addClass('show');
-		        window.location.replace('/contacts');
-		      },
-		      error: function(){
-		        $('#failure').addClass('show');
-		      }
-		    });
-		  return false;
-	  }
-	});
+  });
+  function saveContact()
+    {
+	    $.ajax({
+	      type: 'POST',
+	      url: $('#group-form').attr('action'),
+	      data: $('#group-form').serialize(),
+	      dataType: "json",
+	      success: function(data) {
+	      	alert('working');
+					$('#success').addClass('show');
+	        window.location.replace('/contacts');
+	      },
+	      error: function(){
+	      	alert(' ddddddd working');
+	        $('#failure').addClass('show');
+	      }
+	    });
+	  return false;
+  }
+
 </script>

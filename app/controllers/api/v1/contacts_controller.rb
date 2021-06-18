@@ -7,7 +7,8 @@ class Api::V1::ContactsController < ApplicationController
       render json: @contact, status: :created
       ContactMailer.with(contact: @contact).welcome_email.deliver_now
     else
-      return redirect_to contacts_path(contact_errors: @contact.errors.full_messages)
+      render json: @contact, status: :not_created
+      # return redirect_to contacts_path(contact_errors: @contact.errors.full_messages)
     end
   end
 
