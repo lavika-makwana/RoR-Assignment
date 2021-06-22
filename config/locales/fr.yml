@@ -31,3 +31,7 @@ fr:
               blank: "LE NUMÉRO DE TÉLÉPHONE N'EST PAS UN NUMÉRO"
             message: 
               blank: "LE MESSAGE NE PEUT PAS ÊTRE VIDE"
+  controllers:
+    errors:
+      404_error_message: "La page que vous cherchiez n'existe pas (404)"
+      500_error_message: "Nous sommes désolés, mais quelque chose s'est mal passé (500)" 
