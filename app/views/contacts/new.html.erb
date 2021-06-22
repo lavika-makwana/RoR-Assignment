@@ -1,0 +1,110 @@
+<% flash.each do |key, value| %>
+  <div class="after_submit show" id="<%= key == 'success' ? 'success' : 'failure'  %>"><%= value %></div>
+<% end %>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <span class="navbar-brand"><%= t :language %></span>
+   <ul class="navbar-nav">
+	<li class="nav-item active">
+	  <span class="nav-link"><%= link_to "#{t :english}", root_path(locale: :en) %></span></span>
+	</li>
+	<li class="nav-item">
+	  <span class="nav-link"><%= link_to "#{t :french}", root_path(locale: :fr) %></span>
+	</li>
+  </ul>
+</nav>
+<div class="container-contact100">
+		<div class="wrap-contact100">
+		<%= form_for @contact, html: { class: 'contact100-form validate-form', id: 'group-form'} do |form| %>
+		<span class="contact100-form-title">
+			<%= t :heading %>
+		</span>
+		<% if @contact.present? && error_message('first_name') %>
+			<label class="label-input100 error-message" for="first-name"><%= error_message('first_name') if @contact.present? %></label>
+		<% else %>
+			<label class="label-input100" for="first-name"><%= t :name_label %></label>
+		<% end %>
+		<div class="wrap-input100 rs1-wrap-input100 validate-input">
+			<%= form.text_field :first_name, class: 'input100', id: 'first-name', placeholder: "#{t :first_name}", required: true %> 
+			<span class="focus-input100 fNameError"></span>
+		</div>
+		<div class="wrap-input100 rs2-wrap-input100 validate-input" data-validate="Type last name">
+			<%= form.text_field :last_name, class: 'input100 lNameTxtOnly', id: 'last-name', placeholder: "#{t :last_name}" , required: true %>
+			<span class="focus-input100 lNameError"></span>
+		</div>
+
+		<% if @contact.present? && error_message('email') %>
+			<label class="label-input100 error-message" for="first-name"><%= error_message('email') if @contact.present? %></label>
+		<% else %>
+			<label class="label-input100" for="email"><%= t :email_label %></label>
+		<% end %>
+		<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+			<%= form.email_field :email, class: 'input100', id: 'email', placeholder: "#{t :eg_email}" %>
+			<span class="focus-input100"></span>
+		</div>
+
+		<% if @contact.present? && error_message('phone_number') %>
+			<label class="label-input100 error-message" for="first-name"><%= error_message('phone_number') if @contact.present? %></label>
+		<% else %>
+			<label class="label-input100" for="phone-number"><%= t :phone_label %></label>
+		<% end %>
+		<div class="wrap-input100">
+			<%= form.number_field :phone_number, class: 'input100 numeric', id: 'phone', placeholder: "#{t :eg_phone}" %>
+			<span class="focus-input100"></span>
+		</div>
+
+		<label class="label-input100 error-message" for="message"><%= error_message('message') %></label>
+		<div class="wrap-input100 validate-input" data-validate = "Message is required">
+			<%= form.text_area :message, class: 'input100', id: 'message', placeholder: "#{t :message_text}" %>
+			<span class="focus-input100"></span>
+		</div>
+
+		<div class="container-contact100-form-btn">
+			<button class="contact100-form-btn submit_btn">
+				<%= form.submit "#{t :sbmit_btn}", :class => 'btn-success' %>
+			</button>
+		</div>
+	<% end %>
+	<div class="contact100-more flex-col-c-m contact-background">
+		<div class="flex-w size1 p-b-47">
+			<div class="txt1 p-r-25">
+				<span class="lnr lnr-map-marker"></span>
+			</div>
+			<div class="flex-col size2">
+				<span class="txt1 p-b-20">
+					<%= t :address %>
+				</span>
+
+				<span class="txt2">
+					<%= t :full_address %>
+				</span>
+			</div>
+		</div>
+		<div class="dis-flex size1 p-b-47">
+			<div class="txt1 p-r-25">
+				<span class="lnr lnr-phone-handset"></span>
+			</div>
+			<div class="flex-col size2">
+				<span class="txt1 p-b-20">
+					<%= t :lets_talk %>
+				</span>
+				<span class="txt3">
+					+1 800 1236879
+				</span>
+			</div>
+		</div>
+		<div class="dis-flex size1 p-b-47">
+			<div class="txt1 p-r-25">
+				<span class="lnr lnr-envelope"></span>
+			</div>
+			<div class="flex-col size2">
+				<span class="txt1 p-b-20">
+					<%= t :general_support %>
+				</span>
+				<span class="txt3">
+					<%= t :contact_email %>
+				</span>
+			</div>
+		</div>
+	</div>
+</div>
+
