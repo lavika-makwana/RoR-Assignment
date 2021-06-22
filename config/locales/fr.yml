@@ -8,30 +8,33 @@ fr:
   general_support: "Support général"
   contact_email: "contact@example.com"
   heading: "Envoie-nous un message"
-  name_label: "DITES-NOUS VOTRE NOM *"
+  name_label: "Dites-nous votre nom *"
   first_name: "Prénom"
   last_name: "Nomdefamille"
-  email_label: "ENTRER VOTRE EMAIL *"
+  email_label: "entrer votre email *"
   eg_email: "Par exemple. exemple.exemple@email.com"
-  phone_label: "ENTRER NUMÉRO DE TÉLÉPHONE" 
+  phone_label: "Entrez le numéro de téléphone" 
   eg_phone: "Parexemple.+1800000000"
   message: "Un message*"
   message_text: "Écrivez-nous unmessage"
-  sbmit_btn: "ENVOYER LE MESSAGE"
+  sbmit_btn: "Envoyer le message"
   activerecord:
     errors:
       models:
         contact:
           attributes:
             first_name:
-              blank: "NOM DOIT DONNER SVP"
+              blank: "Le nom doit être donné s'il vous plaît"
             email: 
-              blank: "L'E-MAIL NE PEUT PAS ÊTRE VIDE"
+              blank: "L'e-mail ne peut pas être vide"
             phone_number: 
-              blank: "LE NUMÉRO DE TÉLÉPHONE N'EST PAS UN NUMÉRO"
+              blank: "Le numéro de téléphone n'est pas un numéro"
             message: 
-              blank: "LE MESSAGE NE PEUT PAS ÊTRE VIDE"
+              blank: "Le message ne peut pas être vide"
   controllers:
+    contacts:
+      flash_success: "Contact créé avec succès"
+      flash_error: "Quelque chose s'est mal passé"
     errors:
       404_error_message: "La page que vous cherchiez n'existe pas (404)"
       500_error_message: "Nous sommes désolés, mais quelque chose s'est mal passé (500)" 

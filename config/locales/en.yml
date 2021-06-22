@@ -7,31 +7,34 @@ en:
   lets_talk: "Lets Talk"
   general_support: "General Support"
   contact_email: "contact@example.com"
-  heading: "Send Us A Message"
-  name_label: "TELL US YOUR NAME *"
+  heading: "Send us a message"
+  name_label: "Tell us your name *"
   first_name: "FirstName"
   last_name: "LastName"
-  email_label: "ENTER YOUR EMAIL *"
+  email_label: "Enter your email *"
   eg_email: "Eg.example.example@email.com"
-  phone_label: "ENTER PHONE NUMBER" 
+  phone_label: "Enter phone number" 
   eg_phone: "Eg.+1800000000"
   message: "Message*"
   message_text: "WriteMessage"
-  sbmit_btn: "SEND MESSAGE"
+  sbmit_btn: "Send message"
   activerecord:
     errors:
       models:
         contact:
           attributes:
             first_name:
-              blank: "NAME MUST GIVEN PLEASE"
+              blank: "Name must be given please"
             email: 
-              blank: "EMAIL CAN'T BE BLANK"
+              blank: "Email can not be blank"
             phone_number: 
-              blank: "PHONE NUMBER IS NOT A NUMBER"
+              blank: "Phone number is not a number"
             message: 
-              blank: "MESSAGE CAN'T BE BLANK"
+              blank: "Message can not be blank"
   controllers:
+    contacts:
+      flash_success: "Successfully created contact"
+      flash_error: "Something went wrong"
     errors:
       404_error_message: "The page you were looking for doesn't exist (404)"
       500_error_message: "We're sorry, but something went wrong (500)" 

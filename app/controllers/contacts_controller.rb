@@ -10,11 +10,11 @@ class ContactsController < ApplicationController
 	def create
 		@contact = Contact.new(contact_params)
 		if @contact.save
-			flash[:success] = 'Successfully created contact'
+			flash[:success] = t('controllers.contacts.flash_success')
 			ContactMailer.with(contact: @contact).welcome_email.deliver_now
 			redirect_to contacts_url
 		else
-			flash[:error] = 'Something went wrong'
+			flash[:error] = t('controllers.contacts.flash_error')
 			render :new
 		end
 	end
