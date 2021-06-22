@@ -1,9 +1,8 @@
 class ContactMailer < ApplicationMailer
-	default from: 'makwanalavika@gmail.com'
+	default from: ENV['mailer_email']
 
   def welcome_email
     @contact = params[:contact]
-    # @url  = 'http://example.com/login'
     mail(to: @contact.email, subject: 'Welcome to the contact')
   end
 end
