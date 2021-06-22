@@ -528,7 +528,7 @@ textarea.input100 {
   padding: 16px;
   position: fixed;
   z-index: 1;
-  left: 50%;
+  right: 28%;
   bottom: 30px;
   font-size: 17px;
 }
@@ -543,13 +543,13 @@ textarea.input100 {
 
 #success.show {
   visibility: visible;
-  /*-webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
-  animation: fadein 0.5s, fadeout 0.5s 2.5s;*/
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }
 #failure.show {
   visibility: visible;
-  /*-webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
-  animation: fadein 0.5s, fadeout 0.5s 2.5s;*/
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }
 @-webkit-keyframes fadein {
   from {bottom: 0; opacity: 0;} 
@@ -570,8 +570,7 @@ textarea.input100 {
   from {bottom: 30px; opacity: 1;}
   to {bottom: 0; opacity: 0;}
 }
-/*.contact100-more::before {
-  background-image: '../images/bg-01.jpg' !important; 
-}
-*/
 
+.error-message{
+  color: red;
+}
