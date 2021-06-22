@@ -1,21 +1,33 @@
 en:
-  welcome: 'Language'
-  english: 'English'
-  french: 'French'
-  address: 'Address'
-  full_address: 'Mada Center 8th floor, 379 Hudson St, New York, NY 10018 US'
-  lets_talk: 'Lets Talk'
-  general_support: 'General Support'
-  contact_email: 'contact@example.com'
-  heading: 'Send Us A Message'
-  name_label: 'TELL US YOUR NAME *'
-  first_name: 'FirstName'
-  last_name: 'LastName'
-  email_label: 'ENTER YOUR EMAIL *'
-  eg_email: 'Eg.example.example@email.com'
-  phone_label: 'ENTER PHONE NUMBER' 
-  eg_phone: 'Eg.+1800000000'
-  message: 'Message*'
-  message_text: 'WriteMessage'
-  sbmit_btn: 'SEND MESSAGE'
-
+  language: "Language"
+  english: "English"
+  french: "French"
+  address: "Address"
+  full_address: "Mada Center 8th floor, 379 Hudson St, New York, NY 10018 US"
+  lets_talk: "Lets Talk"
+  general_support: "General Support"
+  contact_email: "contact@example.com"
+  heading: "Send Us A Message"
+  name_label: "TELL US YOUR NAME *"
+  first_name: "FirstName"
+  last_name: "LastName"
+  email_label: "ENTER YOUR EMAIL *"
+  eg_email: "Eg.example.example@email.com"
+  phone_label: "ENTER PHONE NUMBER" 
+  eg_phone: "Eg.+1800000000"
+  message: "Message*"
+  message_text: "WriteMessage"
+  sbmit_btn: "SEND MESSAGE"
+  activerecord:
+    errors:
+      models:
+        contact:
+          attributes:
+            first_name:
+              blank: "NAME MUST GIVEN PLEASE"
+            email: 
+              blank: "EMAIL CAN'T BE BLANK"
+            phone_number: 
+              blank: "PHONE NUMBER IS NOT A NUMBER"
+            message: 
+              blank: "MESSAGE CAN'T BE BLANK"

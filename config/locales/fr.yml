@@ -1,21 +1,33 @@
 fr:
-  welcome: bienvenu
-  language: 'Langue'
-  english: 'Anglais'
-  french: 'français'
-  address: 'Adresse'
-  full_address: 'Mada Center 8e étage, 379 Hudson St, New York, NY 10018 États-Unis'
-  lets_talk: 'parlons'
-  general_support: 'Support général'
-  contact_email: 'contact@example.com'
-  heading: 'Envoie-nous un message'
-  name_label: 'DITES-NOUS VOTRE NOM *'
-  first_name: 'Prénom'
-  last_name: 'Nomdefamille'
-  email_label: 'ENTRER VOTRE EMAIL *'
-  eg_email: 'Par exemple. exemple.exemple@email.com'
-  phone_label: 'ENTRER NUMÉRO DE TÉLÉPHONE' 
-  eg_phone: 'Parexemple.+1800000000'
-  message: 'Un message*'
-  message_text: 'Écrivez-nous unmessage'
-  sbmit_btn: 'ENVOYER LE MESSAGE'
+  language: "Langue"
+  english: "Anglais"
+  french: "français"
+  address: "Adresse"
+  full_address: "Mada Center 8e étage, 379 Hudson St, New York, NY 10018 États-Unis"
+  lets_talk: "parlons"
+  general_support: "Support général"
+  contact_email: "contact@example.com"
+  heading: "Envoie-nous un message"
+  name_label: "DITES-NOUS VOTRE NOM *"
+  first_name: "Prénom"
+  last_name: "Nomdefamille"
+  email_label: "ENTRER VOTRE EMAIL *"
+  eg_email: "Par exemple. exemple.exemple@email.com"
+  phone_label: "ENTRER NUMÉRO DE TÉLÉPHONE" 
+  eg_phone: "Parexemple.+1800000000"
+  message: "Un message*"
+  message_text: "Écrivez-nous unmessage"
+  sbmit_btn: "ENVOYER LE MESSAGE"
+  activerecord:
+    errors:
+      models:
+        contact:
+          attributes:
+            first_name:
+              blank: "NOM DOIT DONNER SVP"
+            email: 
+              blank: "L'E-MAIL NE PEUT PAS ÊTRE VIDE"
+            phone_number: 
+              blank: "LE NUMÉRO DE TÉLÉPHONE N'EST PAS UN NUMÉRO"
+            message: 
+              blank: "LE MESSAGE NE PEUT PAS ÊTRE VIDE"
