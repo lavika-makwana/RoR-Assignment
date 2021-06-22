@@ -18,6 +18,8 @@ en:
   message: "Message*"
   message_text: "WriteMessage"
   sbmit_btn: "Send message"
+  page_not_found: "The page you were looking for doesn't exist (404)"
+  internal_server_error: "We're sorry, but something went wrong (500)" 
   activerecord:
     errors:
       models:
@@ -35,6 +37,3 @@ en:
     contacts:
       flash_success: "Successfully created contact"
       flash_error: "Something went wrong"
-    errors:
-      404_error_message: "The page you were looking for doesn't exist (404)"
-      500_error_message: "We're sorry, but something went wrong (500)" 
